@@ -3,11 +3,9 @@
 import { useState } from "react";
 
 function Page() {
-  const [info, setInfo] = useState<any>([]);
   const bringHandle = async () => {
     const res = await fetch("http://localhost:3000/api/todos");
     const data = await res.json();
-    setInfo(data);
     console.log(data);
   };
   return (
@@ -18,7 +16,7 @@ function Page() {
       >
         Bring ⬅
       </button>
-      <ul>
+      {/* <ul>
         {info &&
           info.map((inf: object) => {
             return (
@@ -31,7 +29,7 @@ function Page() {
               </li>
             );
           })}
-      </ul>
+      </ul> */}
     </div>
   );
 }
