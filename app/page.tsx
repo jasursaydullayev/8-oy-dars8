@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-function Page() {
+function page() {
   const [info, setInfo] = useState<any>(null);
   const bringHandle = async () => {
     const res = await fetch("http://localhost:3000/api/todos");
@@ -36,4 +36,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default page;
