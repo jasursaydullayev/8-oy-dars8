@@ -1,9 +1,9 @@
 "use client";
 
-import { UseState } from "react";
+import { useState } from "react";
 
-function page() {
-  const [info, setInfo] = UseState<any>([]);
+function Page() {
+  const [info, setInfo] = useState<any>([]);
   const bringHandle = async () => {
     const res = await fetch("http://localhost:3000/api/todos");
     const data = await res.json();
@@ -36,4 +36,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;
